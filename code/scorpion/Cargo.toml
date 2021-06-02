@@ -1,0 +1,13 @@
+[package]
+name = "scorpion"
+version = "0.1.0"
+authors = ["Christopher Mühl <christopher@padarom.xyz>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# We require buildtime-bindgen because the default bindings are for v2.47.0
+# while we currently develop with librealsense v2.49.0
+realsense-rust = { version = "1.1.0", features = ["buildtime-bindgen"] }
+anyhow = "1.0.43"

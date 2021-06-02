@@ -1,0 +1,26 @@
+{
+    "name": "FB5317M",
+    "version": "1.0.0",
+    "description": "A library that makes working with the Feetech FB5317M-360 easier by adding simple seek and read functionality",
+    "keywords": "feetech, servo, continuous, seeking",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/padarom/hogpit.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Christopher Mühl",
+        "email": "christopher@padarom.xyz",
+        "url": "https://padarom.xyz"
+      }
+    ],
+    "license": "MIT",
+    "homepage": "https://hogpit.padarom.xyz/",
+    "dependencies": {
+      "arduino-libraries/Servo": "^1.1.8"
+    },
+    "frameworks": "arduino",
+    "platforms": "*"
+}
