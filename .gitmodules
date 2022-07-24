@@ -1,0 +1,3 @@
+[submodule "code/libs/dcs-bios/dcs-bios-arduino-library"]
+	path = code/libs/dcs-bios/dcs-bios-arduino-library
+	url = git@github.com:dcs-bios/dcs-bios-arduino-library.git

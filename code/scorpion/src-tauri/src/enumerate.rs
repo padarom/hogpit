@@ -5,14 +5,11 @@ use std::collections::HashSet;
 fn match_info(device: &Device, info_param: Rs2CameraInfo) -> String {
     match device.info(info_param) {
         Some(s) => String::from(s.to_str().unwrap()),
-        None => String::from("N/A"),
+        None => String::from("N/A")
     }
 }
 
 fn main() -> Result<()> {
-    println!("----\nEnumerating all devices compatible with RealSense:\n----");
-    // The below code is the equivalent of creating a HashSet of query_devices that just contains Rs2ProductLine::Any.
-    // In other words, this will look for any connected device that is compatible with RealSense.
     let devices = Context::new()?.query_devices(HashSet::new());
     ensure!(!devices.is_empty(), "No devices found");
 

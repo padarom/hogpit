@@ -1,0 +1,28 @@
+[package]
+name = "app"
+version = "0.1.0"
+description = "A Tauri App"
+authors = ["you"]
+license = ""
+repository = ""
+default-run = "app"
+edition = "2018"
+build = "src/build.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-build = { version = "1.0.0-beta.3" }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+tauri = { version = "1.0.0-beta.5", features = ["api-all"] }
+anyhow = "1.0.43"
+# We require buildtime-bindgen because the default bindings are for v2.47.0
+# while we currently develop with librealsense v2.49.0
+realsense-rust = { version = "1.1.0", features = ["buildtime-bindgen"] }
+
+[features]
+default = [ "custom-protocol" ]
+custom-protocol = [ "tauri/custom-protocol" ]
