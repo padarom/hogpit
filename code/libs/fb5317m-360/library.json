@@ -12,12 +12,12 @@
     [
       {
         "name": "Christopher Mühl",
-        "email": "christopher@padarom.xyz",
-        "url": "https://padarom.xyz"
+        "email": "christopher@muehl.dev",
+        "url": "https://muehl.dev"
       }
     ],
     "license": "MIT",
-    "homepage": "https://hogpit.padarom.xyz/",
+    "homepage": "https://hogpit.muehl.dev/",
     "dependencies": {
       "arduino-libraries/Servo": "^1.1.8"
     },
