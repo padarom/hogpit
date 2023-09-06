@@ -1,10 +1,8 @@
 module.exports = {
   darkMode: 'class',
-  purge: [
-    './src/**/*.jsx',
-    './src/**/*.js',
-    './src/**/*.tsx',
-    './src/**/*.ts',
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    './content/**/*.{md,mdx}',
   ],
   theme: {
     fontFamily: {

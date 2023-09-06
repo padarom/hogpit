@@ -14,4 +14,4 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: dist
-          working-dir: code/blog
+          working-dir: blog

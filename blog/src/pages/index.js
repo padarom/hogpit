@@ -35,12 +35,17 @@ const IndexPage = ({ data }) => {
               />
             </div>
             <div tw="ml-3">
-              <h3 tw="text-sm font-medium text-yellow-800">Keep in mind</h3>
+              <h3 tw="text-sm font-medium text-yellow-800">Keep in mind.</h3>
               <div tw="mt-2 text-sm text-yellow-700">
                 <p>
                   This page itself is currently still very much a work in progress.
                   I will be working on finishing the code for the site before adding
                   any real content to it, so do not expect a lot of content at the moment.
+                </p>
+                <p class="mt-2">
+                  Also, I am currently in the process of modernizing and afterwards moving
+                  into my new house. I don't expect to have much time for anything else until
+                  at the earliest the spring of 2024.
                 </p>
               </div>
             </div>
@@ -71,45 +76,38 @@ const IndexPage = ({ data }) => {
 
       <BlogPosts
         css={{ marginTop: '100px'}}
-        data={data}
+        posts={data.posts.nodes}
         tabularLayout={useTabularLayout}
       />
     </Layout>
   )
 }
 
-export const query = graphql`
-{
-  # Load the last 6 posts
+export const query = graphql`{
   posts: allFile(
-    filter: {
-      sourceInstanceName: { eq: "parts" },
-      name: { eq: "README" },
-      extension: { in: ["md", "mdx"] }
-    },
-    sort: { fields: changeTime, order: DESC }
+    filter: {sourceInstanceName: {eq: "parts"}, name: {eq: "index"}, extension: {in: ["md", "mdx"]}}
+    sort: {changeTime: DESC}
   ) {
     nodes {
+      id
       relativeDirectory
       changeTime(formatString: "MMMM Do, YYYY")
       content: childMdx {
         excerpt
-        slug
-        timeToRead
+        fields {
+          timeToRead { minutes }
+        }
         frontmatter {
           title
         }
       }
     }
   }
-
-  # Load the default author data (me!)
-  author: authorsYaml(featured: { eq: true }) {
+  author: authorsYaml(featured: {eq: true}) {
     avatar
     bio
     slug
   }
-}
-`
+}`
 
 export default IndexPage

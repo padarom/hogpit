@@ -45,7 +45,8 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'parts',
-        path: '../../parts/',
+        path: './content/parts/',
+        fastHash: true,
       },
       __key: 'parts',
     },
@@ -53,7 +54,8 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: '../../blog/images/',
+        path: './content/images/',
+        fastHash: true,
       },
       __key: 'images',
     },
@@ -61,7 +63,8 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
-        path: '../../blog/posts/',
+        path: './content/posts/',
+        fastHash: true,
       },
       __key: 'posts',
     },
@@ -69,7 +72,8 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'authors',
-        path: '../../blog/authors/',
+        path: './content/authors/',
+        fastHash: true,
       },
       __key: 'authors',
     },

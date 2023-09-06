@@ -12,12 +12,12 @@ const styles = {
   subtext: tw`text-gray-300 font-bold`,
 }
 
-export default function BlogPosts ({ data, tabularLayout }) {
-  const posts = data.posts.nodes.map((node) => <BlogPost node={node} key={node.relativeDirectory} />)
+export default function BlogPosts ({ posts, tabularLayout }) {
+  const blogPosts = posts.map((node) => <BlogPost node={node} key={node.id} />)
 
   return (
     <Container>
-      {posts}
+      {blogPosts}
     </Container>
   )
 }
@@ -31,11 +31,12 @@ function BlogPost ({ node }) {
           alt={node.content.frontmatter.title}
         />
       </div>
+      
       <div tw="w-1/2 pl-20 py-10">
         <h3 css={styles.title}>{node.content.frontmatter.title}</h3>
         <div css={styles.excerpt}>{node.content.excerpt}</div>
         <div css={styles.subtext}>
-          {node.changeTime} &middot; {node.content.timeToRead} min read
+          {node.changeTime} &middot; {node.content.fields.timeToRead.minutes} min read
         </div>
       </div>
     </Link>

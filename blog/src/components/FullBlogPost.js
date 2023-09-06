@@ -1,9 +1,13 @@
 import * as React from 'react'
 import { MDXProvider } from '@mdx-js/react'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { CodeBlock, github } from 'react-code-blocks'
 import { Disqus } from 'gatsby-plugin-disqus'
 import tw from 'twin.macro'
+
+const InlineCode = tw.code`
+  text-gray-500 px-[2px] bg-gray-100
+  dark:text-gray-400 dark:bg-gray-700
+`
 
 const components = {
   p: tw.p`
@@ -13,7 +17,9 @@ const components = {
     text-indigo-400 hover:underline
     dark:text-indigo-300
   `,
-  code: ({ children, className }) => {
+  code: ({ className, children }) => {
+    if (!className) return <InlineCode>{children}</InlineCode>
+
     const language = className.replace('language-', '')
     
     return <CodeBlock
@@ -24,18 +30,16 @@ const components = {
   },
 }
 
-export default function FullBlogPost ({ post }) {
+export default function FullBlogPost ({ post, children }) {
   const disqusConfig = {
     identifier: post.parent.relativeDirectory,
     title: post.frontmatter.title
   }
-  
+
   return (
     <>
       <MDXProvider components={components}>
-        <MDXRenderer>
-          {post.body}
-        </MDXRenderer>
+        {children}
       </MDXProvider>
 
       <hr tw="mt-10 mb-20" />
