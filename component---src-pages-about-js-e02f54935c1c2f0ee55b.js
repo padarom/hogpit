@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkhogpit=self.webpackChunkhogpit||[]).push([[8682],{95465:function(t,e,n){n.r(e);n(67294);var u=n(48555),a=n(70917);e.default=t=>{let{data:e}=t;return(0,a.tZ)(u.Z,null,"Coming soon.")}}}]);
+//# sourceMappingURL=component---src-pages-about-js-e02f54935c1c2f0ee55b.js.map
