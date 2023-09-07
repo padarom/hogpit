@@ -1,6 +1,7 @@
 ---
 title: Electrical Power Panel
-heroImage: ../../images/unsplash.jpg
+heroImage: ./first_iteration.jpg
+heroSubtitle: The first proper iteration of my Electrical Power Panel. This was constructed and milled on my CNC machine. It doesn't yet include its green backlight in this picture.
 ---
 
 The first thing I ever tried to construct for my simulator was an HSI. I knew early on that I didn't just want to have all my instruments be LCD screens, I wanted real mechanical ones.

@@ -30,7 +30,7 @@ const components = {
   },
 }
 
-export default function FullBlogPost ({ post, children }) {
+export default function FullPost ({ post, children }) {
   const disqusConfig = {
     identifier: post.parent.relativeDirectory,
     title: post.frontmatter.title

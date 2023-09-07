@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { graphql } from 'gatsby'
-import FullBlogPost from '../components/FullBlogPost'
+import FullPost from '../components/blog/FullPost'
 import tw from 'twin.macro'
 
 const Title = tw.h1`
@@ -15,6 +15,7 @@ const Content = tw.div`
 
 const PageWrapper = tw.div`px-10`
 const ImageWrapper = tw.div`mb-16`
+const Subtitle = tw.p`mt-2 text-gray-500 text-sm`
 
 // TODO: tw props do not work in this file. I assume it is because the file
 //   is loaded using the gatsby-mdx loader and does therefore not get parsed
@@ -28,10 +29,11 @@ const Post = ({ data: { post }, children }) => {
         
         <ImageWrapper>
           <GatsbyImage image={getImage(post.frontmatter.heroImage)} />
+          <Subtitle>{post.frontmatter.heroSubtitle}</Subtitle>
         </ImageWrapper>
 
         <Content>
-          <FullBlogPost post={post} children={children} />
+          <FullPost post={post} children={children} />
         </Content>
       </PageWrapper>
     </Layout>
@@ -48,6 +50,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        heroSubtitle
         heroImage {
           childImageSharp {
             gatsbyImageData(

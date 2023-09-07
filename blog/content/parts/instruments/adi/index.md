@@ -1,6 +1,7 @@
 ---
 title: ADI - Attitude Direction Indicator
-heroImage: ../../images/unsplash.jpg
+heroImage: ./side_picture.jpg
+heroSubtitle: My ARU-11/A ADI taken apart, showing its spectacular mechnical core.
 ---
 
 After obtaining my [HSI](/instruments/hsi) for relatively cheap, I thought about other instruments that are difficult to develop by myself. The one that immediately came to mind was the ADI.

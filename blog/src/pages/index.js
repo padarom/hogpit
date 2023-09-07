@@ -2,7 +2,7 @@ import * as React from 'react'
 import Layout from '../components/Layout'
 import Author from '../components/Author'
 import Icon from '../components/Icon'
-import BlogPosts from '../components/BlogPosts'
+import PostList from '../components/blog/PostList'
 import tw from 'twin.macro'
 import { graphql } from 'gatsby'
 
@@ -16,7 +16,7 @@ const Introduction = tw.div`
 `
 
 const IndexPage = ({ data }) => {
-  const [useTabularLayout, setTabularLayout] = React.useState(true)
+  const [useTabularLayout, setTabularLayout] = React.useState(false)
 
   return (
     <Layout>
@@ -26,31 +26,6 @@ const IndexPage = ({ data }) => {
           of building an <span tw="font-black">A&#8209;10C</span> simulator&nbsp;pit.
         </Introduction>
 
-        <div tw="rounded-md bg-yellow-50 p-4 mb-20 -mt-5">
-          <div tw="flex">
-            <div tw="flex-shrink-0">
-              <Icon 
-                className="fa-solid fa-exclamation-triangle"
-                tw="h-5 w-5 p-0 text-yellow-400"
-              />
-            </div>
-            <div tw="ml-3">
-              <h3 tw="text-sm font-medium text-yellow-800">Keep in mind.</h3>
-              <div tw="mt-2 text-sm text-yellow-700">
-                <p>
-                  This page itself is currently still very much a work in progress.
-                  I will be working on finishing the code for the site before adding
-                  any real content to it, so do not expect a lot of content at the moment.
-                </p>
-                <p class="mt-2">
-                  Also, I am currently in the process of modernizing and afterwards moving
-                  into my new house. I don't expect to have much time for anything else until
-                  at the earliest the spring of 2024.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div tw="flex justify-between items-center">
           <div tw="flex-shrink-0 w-full md:w-3/5 xl:w-1/2">
@@ -61,20 +36,20 @@ const IndexPage = ({ data }) => {
             <Icon
               className="fa-solid fa-objects-column"
               tw="mr-4"
-              active={!useTabularLayout}
-              onClick={ () => setTabularLayout(false) }
+              active={useTabularLayout}
+              onClick={ () => setTabularLayout(true) }
             />
 
             <Icon
               className="fa-solid fa-list-timeline"
-              active={useTabularLayout}
-              onClick={ () => setTabularLayout(true) }
+              active={!useTabularLayout}
+              onClick={ () => setTabularLayout(false) }
             />
           </div>
         </div>
       </Header>
 
-      <BlogPosts
+      <PostList
         css={{ marginTop: '100px'}}
         posts={data.posts.nodes}
         tabularLayout={useTabularLayout}
@@ -99,6 +74,15 @@ export const query = graphql`{
         }
         frontmatter {
           title
+          heroImage {
+            childImageSharp {
+              gatsbyImageData(
+                width: 500,
+                placeholder: BLURRED,
+                formats: [AUTO, WEBP, JPG]
+              )
+            }
+          }
         }
       }
     }

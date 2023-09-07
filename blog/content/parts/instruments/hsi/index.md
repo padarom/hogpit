@@ -1,6 +1,7 @@
 ---
 title: HSI - Horizontal Situation Indicator
-heroImage: ../../images/unsplash.jpg
+heroImage: ./side_picture.jpg
+heroSubtitle: My AF/A24J-1 HSI taken apart to inspect its insides.
 ---
 
 The first thing I ever tried to construct for my simulator was an HSI. I knew early on that I didn't just want to have all my instruments be LCD screens, I wanted real mechanical ones.

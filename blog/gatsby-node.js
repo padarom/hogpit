@@ -3,7 +3,7 @@ const { createFilePath } = require('gatsby-source-filesystem')
 const readingTime = require('reading-time')
 const slugify = require('@sindresorhus/slugify')
 
-const postTemplate = path.resolve('./src/templates/Post.js')
+const postTemplate = path.resolve('./src/templates/BlogPost.js')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
