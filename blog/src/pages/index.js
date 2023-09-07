@@ -2,7 +2,7 @@ import * as React from 'react'
 import Layout from '../components/Layout'
 import Author from '../components/Author'
 import Icon from '../components/Icon'
-import PostList from '../components/blog/PostList'
+import PartsPostList from '../components/blog/PartsPostList'
 import tw from 'twin.macro'
 import { graphql } from 'gatsby'
 
@@ -49,9 +49,8 @@ const IndexPage = ({ data }) => {
         </div>
       </Header>
 
-      <PostList
+      <PartsPostList
         css={{ marginTop: '100px'}}
-        posts={data.posts.nodes}
         tabularLayout={useTabularLayout}
       />
     </Layout>
@@ -59,34 +58,6 @@ const IndexPage = ({ data }) => {
 }
 
 export const query = graphql`{
-  posts: allFile(
-    filter: {sourceInstanceName: {eq: "parts"}, name: {eq: "index"}, extension: {in: ["md", "mdx"]}}
-    sort: {changeTime: DESC}
-  ) {
-    nodes {
-      id
-      relativeDirectory
-      changeTime(formatString: "MMMM Do, YYYY")
-      content: childMdx {
-        excerpt
-        fields {
-          timeToRead { minutes }
-        }
-        frontmatter {
-          title
-          heroImage {
-            childImageSharp {
-              gatsbyImageData(
-                width: 500,
-                placeholder: BLURRED,
-                formats: [AUTO, WEBP, JPG]
-              )
-            }
-          }
-        }
-      }
-    }
-  }
   author: authorsYaml(featured: {eq: true}) {
     avatar
     bio

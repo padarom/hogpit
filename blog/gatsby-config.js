@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Hogpit',
   },
+  trailingSlash: 'never',
   plugins: [
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',

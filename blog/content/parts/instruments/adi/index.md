@@ -1,5 +1,7 @@
 ---
 title: ADI - Attitude Direction Indicator
+released: 2021-07-02
+updated: 2023-09-07
 heroImage: ./side_picture.jpg
 heroSubtitle: My ARU-11/A ADI taken apart, showing its spectacular mechnical core.
 ---

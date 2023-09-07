@@ -20,6 +20,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@babylonjs/core": "^6.20.0",
     "@mdx-js/react": "^2.3.0",
     "@sindresorhus/slugify": "^1.1.2",
     "autoprefixer": "^10.2.6",

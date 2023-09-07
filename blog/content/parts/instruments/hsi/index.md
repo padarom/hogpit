@@ -1,5 +1,7 @@
 ---
 title: HSI - Horizontal Situation Indicator
+released: 2021-07-02
+updated: 2023-09-07
 heroImage: ./side_picture.jpg
 heroSubtitle: My AF/A24J-1 HSI taken apart to inspect its insides.
 ---
