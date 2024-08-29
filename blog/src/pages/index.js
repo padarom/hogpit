@@ -26,7 +26,6 @@ const IndexPage = ({ data }) => {
           of building an <span tw="font-black">A&#8209;10C</span> simulator&nbsp;pit.
         </Introduction>
 
-
         <div tw="flex justify-between items-center">
           <div tw="flex-shrink-0 w-full md:w-3/5 xl:w-1/2">
             <Author {...data.author} />
