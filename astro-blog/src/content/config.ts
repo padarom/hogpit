@@ -7,12 +7,14 @@ const posts = defineCollection({
 
 const parts = defineCollection({
   type: 'content',
-  schema: z.object({
-    heroImage: z.string(),
-    heroSubtitle: z.string(),
-    released: z.date(),
-    updated: z.date(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      heroImage: image(),
+      heroSubtitle: z.string(),
+      released: z.date(),
+      updated: z.date(),
+    }),
 })
 
 export const collections = { posts, parts }

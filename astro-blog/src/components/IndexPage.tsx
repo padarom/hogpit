@@ -8,12 +8,17 @@ const author = {
 	slug: 'chris',
 	avatar: 'https://avatars.githubusercontent.com/u/3678770?v=4',
 	bio: `
-		Chris is a software developer who loves to build things.
-		He's a fan of aviation and flight simulators.
+		Written by Christopher, a programmer and maker from the Frankfurt metropolitan
+    area in Germany who loves to build things. He's a fan of aviation and flight simulators
+    and is currently building an A-10C simulator cockpit.
 	`.trim(),
 }
 
-const posts = await getCollection('parts')
+let posts: CollectionEntry<'parts'>[] = await getCollection('parts')
+posts = posts
+  .sort((a, b) => a.data.updated > b.data.updated ? -1 : 1)
+  .slice(0, 6)
+  .map(post => ({ data: post.data, body: post.body, slug: post.slug }))
 
 export const IndexPage = component$(() => {
   const useTabularLayout = useSignal(false)
