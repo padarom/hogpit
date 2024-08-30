@@ -3,15 +3,33 @@ title: Electrical Power Panel
 heroImage: ./first_iteration.jpg
 heroSubtitle: The first proper iteration of my Electrical Power Panel. This was constructed and milled on my CNC machine. It doesn't yet include its green backlight in this picture.
 released: 2021-07-02
-updated: 2023-09-07
+updated: 2024-08-30
 ---
 
-The first thing I ever tried to construct for my simulator was an HSI. I knew early on that I didn't just want to have all my instruments be LCD screens, I wanted real mechanical ones.
+When I started planning my A-10C Warthog simulator, I knew the panels would be a major focus. They needed to be modular, each with a single connector to attach seamlessly to the cockpit bus. To kick things off and refine my design and production process, I chose to start with the Electrical Power Panel.
 
-Therefore I started constructing my own and bought my first 3D printer for it.
+This panel was a relatively straightforward choice, featuring only switches—both momentary and locking—making it an ideal first project to work out all the kinks in the build process. Here's how I approached it:
 
-At some point the instrument started seeming really daunting and getting more complex than I envisioned it originally. I wanted to know how an actual HSI is constructed, but couldn't find any pictures of its mechanics.
+### Layered Construction
 
-I kept looking around for old HSIs on ebay until I eventually found one that seemed to match what I was constructing. An **AF/A24J-1**, the HSI of an F-4 Phantom, which I quickly bought for just shy of 200€.
+The panel is built using a three-layer approach:
 
-My plan wasn't to use this instrument, I still wanted to build my own, but wanted to reverse engineer the original to get some inspiration from it.
+- **Backing Plate**: This layer holds the components and serves as the foundation.
+- **Intermediate Plate**: A spacer that creates the necessary depth and space for the switches and wiring.
+- **Front Plate**: The visible layer, painted and etched with backlit text, which gives the panel its finished look.
+
+All these layers are made from semi-transparent acrylic sheets that I machined on my DIY CNC (specifically, the MPCNC). Once all the feeds and speeds were dialed in for the acrylic and the router bits I was using everything came together nicely.
+
+### Assembly Process
+
+Once the layers were machined, I assembled the front two plates using ACRIFIX 1S 0116, an acrylic adhesive that melts the material and effectively welds the pieces together without leaving any residue. This glue is crucial for a clean finish.
+
+Next, I spray-painted the front two layers black, and then etched the text into the front plate using a V-bit. The result is sharp, backlit lettering that stands out just like the real thing.
+
+Finally, I attached the components to the back plate, soldered and connected everything, and secured the back plate to the front with screws.
+
+### Conclusion
+
+This first panel was a significant milestone in my simulator build. It allowed me to hone the techniques and processes that I’ll be using for the rest of the project. For those interested in a detailed breakdown of the assembly process, you can find more information [here].
+
+This initial success has set a solid foundation for the rest of the build, and I’m excited to continue bringing each part of the A-10C cockpit to life.
