@@ -1,0 +1,44 @@
+---
+import { getCollection } from 'astro:content'
+import { mdxComponents } from '../../../components/mdx'
+import MarkdownPostLayout from '../../../layouts/MarkdownPostLayout.astro'
+
+export async function getStaticPaths() {
+  const entries = await getCollection('parts')
+  return entries.map(entry => {
+    return {
+      params: {
+        slug: entry.slug.split('/').slice(1).join('/'),
+        type: entry.slug.split('/', 1)[0]
+      },
+      props: { entry }
+    }
+  })
+}
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+---
+
+<MarkdownPostLayout title={ `${entry.data.title} | Hogpit` }>
+  <main class="px-10">
+    <h1 class="text-5xl font-bold font-serif max-w-2xl mb-16 mx-auto">{entry.data.title}</h1>
+
+    <div class="mb-16">
+      <img
+        class="w-full h-full object-center object-cover rounded-md"
+        alt={entry.data.heroSubtitle}
+        src={entry.data.heroImage.src}
+      />
+      <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">{entry.data.heroSubtitle}</p>
+    </div>
+
+    <div class="max-w-2xl mx-auto text-lg">
+      <Content components={{ h3: null }} />
+    </div>
+  </main>
+
+  <hr class="mt-10 mb-20 dark:opacity-20 transition-opacity" />
+
+  <!-- <Disqus config={disqusConfig} /> -->
+</MarkdownPostLayout>

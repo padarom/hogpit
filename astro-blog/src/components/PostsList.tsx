@@ -14,7 +14,7 @@ const Post = component$(({ tabular, post, index }: PostProps) => {
   const readTime = calculateReadTime(post.body || '')
 
   return (
-    <a href={post.slug} class={[
+    <a href={`/parts/${post.slug}`} class={[
       'group',
       tabular && 'grid grid-cols-1',
       !tabular && 'grid grid-cols-2 gap-20',

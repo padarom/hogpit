@@ -1,0 +1,8 @@
+---
+const { children } = Astro.props
+const html = await Astro.slots.render('default')
+---
+
+<p class="text-gray-300">
+  <Fragment set:html={html} />
+</p>
