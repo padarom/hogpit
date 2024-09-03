@@ -7,5 +7,5 @@
 # likely can't run this blog by yourself after cloning it, but that is
 # not the point of this repostitory anyway.
 [submodule "fontawesome-pro"]
-	path = astro-blog/src/fontawesome-pro
+	path = blog/public/fontawesome-pro
 	url = git@github.com:padarom/fontawesome-pro.git
