@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content'
 import { mdxComponents } from '../../../components/mdx'
+import Disqus from '../../../components/Disqus.astro'
 import MarkdownPostLayout from '../../../layouts/MarkdownPostLayout.astro'
 
 export async function getStaticPaths() {
@@ -33,12 +34,14 @@ const { Content } = await entry.render()
       <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">{entry.data.heroSubtitle}</p>
     </div>
 
-    <div class="max-w-2xl mx-auto text-lg">
-      <Content components={{ h3: null }} />
+    <div class="max-w-2xl mx-auto text-lg font-serif">
+      <Content components={mdxComponents} />
     </div>
   </main>
 
   <hr class="mt-10 mb-20 dark:opacity-20 transition-opacity" />
 
-  <!-- <Disqus config={disqusConfig} /> -->
+  <div class="max-w-2xl mx-auto">
+    <Disqus shortname="hogpit" identifier={entry.slug} url={Astro.url.href} title={entry.title} />
+  </div>
 </MarkdownPostLayout>

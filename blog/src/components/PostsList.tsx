@@ -1,4 +1,4 @@
-import { component$, useResource$ } from '@builder.io/qwik'
+import { component$ } from '@builder.io/qwik'
 import { type CollectionEntry } from 'astro:content'
 import { createExcerpt } from '../utils/excerpt'
 import { calculateReadTime } from '../utils/readtime'

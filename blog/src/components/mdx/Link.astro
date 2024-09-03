@@ -3,6 +3,6 @@ const { children } = Astro.props
 const html = await Astro.slots.render('default')
 ---
 
-<p class="mb-6">
+<a class="text-indigo-400 hover:underline dark:text-indigo-300 transition-colors">
   <Fragment set:html={html} />
-</p>
+</a>

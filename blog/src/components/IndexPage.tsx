@@ -1,5 +1,5 @@
-import { component$, $, useSignal, useResource$ } from '@builder.io/qwik'
-import { getCollection, getEntry, CollectionEntry } from 'astro:content'
+import { component$, $, useSignal } from '@builder.io/qwik'
+import { getCollection, CollectionEntry } from 'astro:content'
 import { Icon } from '../components/Icon'
 import { Author } from '../components/Author'
 import { PostsList } from '../components/PostsList'
