@@ -1,0 +1,1 @@
+import{d as t}from"./q-BTiuRh3S.js";const e=r=>t("i",{class:["text-gray-400 p-2 rounded-full cursor-pointer","bg-transparent hover:bg-gray-100","dark:text-gray-400 dark:hover:bg-gray-700","transition-colors duration-300",r.active&&"text-gray-900 dark:text-gray-100",r.class]},null,null,3,"nt_0");export{e as s_KleBSMEZ5JQ};
