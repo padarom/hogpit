@@ -1,0 +1,1 @@
+import{_ as t}from"./q-D9GT110l.js";import{b as o,q as e}from"./q-BTiuRh3S.js";const _=o(e(()=>t(()=>import("./q-C8uSSgLw.js"),[]),"s_1ZADwGx0iUc")),a={title:"About the Hogpit"};export{_ as default,a as head};
