@@ -1,5 +1,5 @@
 {
-  "manifestHash": "y3r3ja",
+  "manifestHash": "nrd52a",
   "symbols": {
     "s_02wMImzEAbk": {
       "origin": "../node_modules/@builder.io/qwik-city/lib/index.qwik.mjs",
@@ -1288,7 +1288,7 @@
       "location": "head",
       "attributes": {
         "rel": "preload",
-        "href": "/assets/BSFkPfbf-roboto-latin-ext-400-normal.woff",
+        "href": "/assets/BVyCgWwA-roboto-latin-400-normal.woff",
         "as": "font",
         "type": "font/woff",
         "crossorigin": ""
@@ -1299,7 +1299,7 @@
       "location": "head",
       "attributes": {
         "rel": "preload",
-        "href": "/assets/BVyCgWwA-roboto-latin-400-normal.woff",
+        "href": "/assets/BSFkPfbf-roboto-latin-ext-400-normal.woff",
         "as": "font",
         "type": "font/woff",
         "crossorigin": ""
@@ -1486,7 +1486,7 @@
       "location": "head",
       "attributes": {
         "rel": "preload",
-        "href": "/assets/D76n7Daw-roboto-cyrillic-ext-400-normal.woff2",
+        "href": "/assets/CzgVLciW-righteous-latin-400-normal.woff2",
         "as": "font",
         "type": "font/woff2",
         "crossorigin": ""
@@ -1497,7 +1497,7 @@
       "location": "head",
       "attributes": {
         "rel": "preload",
-        "href": "/assets/CzgVLciW-righteous-latin-400-normal.woff2",
+        "href": "/assets/D76n7Daw-roboto-cyrillic-ext-400-normal.woff2",
         "as": "font",
         "type": "font/woff2",
         "crossorigin": ""

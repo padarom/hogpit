@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://hogpit.muehl.dev/</loc></url>
-<url><loc>https://hogpit.muehl.dev/parts/misc/photon-mono/</loc></url>
 <url><loc>https://hogpit.muehl.dev/parts/misc/prusa-mk3s/</loc></url>
-<url><loc>https://hogpit.muehl.dev/blog/</loc></url>
-<url><loc>https://hogpit.muehl.dev/parts/instruments/hsi/</loc></url>
+<url><loc>https://hogpit.muehl.dev/parts/misc/photon-mono/</loc></url>
+<url><loc>https://hogpit.muehl.dev/simulator/</loc></url>
+<url><loc>https://hogpit.muehl.dev/parts/instruments/adi/</loc></url>
 <url><loc>https://hogpit.muehl.dev/about/</loc></url>
 <url><loc>https://hogpit.muehl.dev/parts/misc/mpcnc/</loc></url>
 <url><loc>https://hogpit.muehl.dev/parts/panels/elec-pwr/</loc></url>
-<url><loc>https://hogpit.muehl.dev/simulator/</loc></url>
-<url><loc>https://hogpit.muehl.dev/parts/instruments/adi/</loc></url>
+<url><loc>https://hogpit.muehl.dev/blog/</loc></url>
+<url><loc>https://hogpit.muehl.dev/parts/instruments/hsi/</loc></url>
 </urlset>
