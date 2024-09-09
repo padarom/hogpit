@@ -1,4 +1,4 @@
-name: Publish Gatsby
+name: Publish Static Site
 
 on:
   push:
@@ -8,10 +8,27 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v1
-      - uses: enriikke/gatsby-gh-pages-action@v2
+      - uses: actions/checkout@v3
         with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          deploy-branch: dist
-          working-dir: blog
+          submodules: true
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - run: bun install
+        working-directory: ./blog
+
+      - run: bun run build.client && bun run build.server
+        working-directory: ./blog
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          publish_dir: ./blog/dist
+          cname: hogpit.muehl.dev
+

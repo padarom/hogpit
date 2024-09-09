@@ -1,3 +1,11 @@
-[submodule "code/libs/dcs-bios/dcs-bios-arduino-library"]
+[submodule "dcs-bios-arduino-library"]
 	path = code/libs/dcs-bios/dcs-bios-arduino-library
 	url = git@github.com:dcs-bios/dcs-bios-arduino-library.git
+
+# Since I don't have an active subscription for FontAwesome Pro anymore
+# I need to bundle them using my own private repository. This means you
+# likely can't run this blog by yourself after cloning it, but that is
+# not the point of this repostitory anyway.
+[submodule "fontawesome-pro"]
+	path = blog/public/fontawesome-pro
+	url = git@github.com:padarom/fontawesome-pro.git

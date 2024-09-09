@@ -1,9 +1,7 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: [
-    './src/**/*.{js,jsx,ts,tsx}',
-    './content/**/*.{md,mdx}',
-  ],
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     fontFamily: {
       'page-title': ['Righteous'],
