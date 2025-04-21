@@ -14,7 +14,7 @@ export default component$(() => {
   return (
     <a href={author.slug || '#'}>
       <div class="flex items-center">
-        <div class="flex-shrink-0">
+        <div class="shrink-0">
           <img
             class="inline-block h-9 w-9 rounded-full"
             src={author.avatar}

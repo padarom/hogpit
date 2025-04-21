@@ -1,6 +1,6 @@
 import { component$ } from '@builder.io/qwik'
 import { Image } from '@unpic/qwik'
-// import { createExcerpt } from '../../../blog/src/utils/excerpt'
+import formatDate from '~/utils/format-date'
 
 // TODO: Determine how to properly type this generically.
 export type Props = {
@@ -18,9 +18,9 @@ export default component$<Props>(({ post, tabular, index }) => {
     ]}>
       <div class="aspect-w-8 aspect-h-4 shadow-2xl">
         <Image
-          class="w-full h-full object-center object-cover rounded-sm"
-          alt={post.frontmatter.heroSubtitle}
-          src={post.frontmatter.heroImage}
+          class="w-full h-full object-center object-cover rounded-xs"
+          alt={post.hero.subtitle}
+          src={post.hero.image}
         />
       </div>
 
@@ -31,9 +31,9 @@ export default component$<Props>(({ post, tabular, index }) => {
         !tabular && 'py-10',
       ]}>
         <h3 class="font-serif text-2xl font-bold mb-3">{post.title}</h3>
-        <p class="mb-3">{post.excerpt.longer}</p>
+        <p class="mb-3">{post.meta.excerpt.longer}</p>
         <p class="text-gray-400 font-bold text-sm">
-          {new Date(post.updated).toLocaleDateString()} &middot; {post.readingTime.text}
+          {formatDate(post.meta.updated)} &middot; {post.meta.readingTime.text}
         </p>
       </div>
     </a>
