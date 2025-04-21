@@ -1,10 +1,10 @@
 import type { DocumentHeadProps } from '@builder.io/qwik-city'
 
-export type PartPost = any
+export type BlogPost = any
 
-const content = import.meta.glob('/../content/parts/**/*.mdx', { eager: true })
+const content = import.meta.glob('/../content/blog/**/*.mdx', { eager: true })
 
-function mapContentToCollection(slug: string, content: DocumentHeadProps): PartPost {
+function mapContentToCollection(slug: string, content: DocumentHeadProps): BlogPost {
   const frontmatter = content.head.frontmatter
 
   return {
@@ -24,8 +24,8 @@ function mapContentToCollection(slug: string, content: DocumentHeadProps): PartP
   }
 }
 
-export const partsCollection = Object.keys(content).reduce<Record<string, PartPost>>((collection, path) => {
-  const slug = path.split('/').slice(-2).join('/').replace('.mdx', '')
+export const blockPostsCollection = Object.keys(content).reduce<Record<string, BlogPost>>((collection, path) => {
+  const slug = path.split('/').slice(-2)[0]
   collection[slug] = mapContentToCollection(slug, content[path])
 
   return collection

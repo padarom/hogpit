@@ -18,7 +18,7 @@ export default component$<Props>(({ post, tabular, index }) => {
     ]}>
       <div class="aspect-w-8 aspect-h-4 shadow-2xl">
         <Image
-          class="w-full h-full object-center object-cover rounded-sm"
+          class="w-full h-full object-center object-cover rounded-xs"
           alt={post.frontmatter.heroSubtitle}
           src={post.frontmatter.heroImage}
         />
