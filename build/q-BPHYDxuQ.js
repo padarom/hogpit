@@ -1,0 +1,1 @@
+import{e as s,b as n,p as o}from"./q-BQP7Lu-e.js";const r=l=>s("a",{class:"text-indigo-400 hover:underline dark:text-indigo-300 transition-colors",...l,children:n("slot",null,null,null,3,null)},{class:o},0,"m3_0");export{r as s_tNEORLrV66A};

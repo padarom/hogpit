@@ -1,0 +1,1 @@
+import{h as o}from"./q-BQP7Lu-e.js";import{g as r}from"./q-BQP7Lu-e.js";const s=()=>{const[e]=o();e.value=!e.value,document.documentElement.classList.toggle("dark")};export{r as _hW,s as s_UbxRQP2j01g};

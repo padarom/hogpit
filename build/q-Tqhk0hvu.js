@@ -1,0 +1,1 @@
+import{_ as t}from"./q-uemlvruI.js";import{c as o,q as e}from"./q-BQP7Lu-e.js";const n=o(e(()=>t(()=>import("./q-CV7tSxLk.js"),[]),"s_ESLWtE9KYO4")),s={title:"Hogpit",meta:[{name:"description",content:"Qwik site description"}]};export{n as default,s as head};

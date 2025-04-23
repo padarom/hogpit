@@ -1,0 +1,1 @@
+import{h as i}from"./q-BQP7Lu-e.js";import{g as n}from"./q-BQP7Lu-e.js";const c=async(r,e)=>{const[t,a,s,o]=i();r.defaultPrevented&&(e.hasAttribute("q:nbs")?await t(location.href,{type:"popstate"}):e.href&&(e.setAttribute("aria-pressed","true"),await t(e.href,{forceReload:a,replaceState:s,scroll:o}),e.removeAttribute("aria-pressed")))};export{n as _hW,c as s_Bdd0p67b8cw};

@@ -1,1 +1,0 @@
-import{d as r,k as l,l as t,S as e}from"./q-BTiuRh3S.js";const o=s=>r("a",null,{href:l(a=>a.href,[s]),class:"px-3 hover:text-gray-700 dark:hover:text-gray-300"},t(e,null,3,"nW_0"),1,"nW_1");export{o as s_saNlPL0Lqsc};

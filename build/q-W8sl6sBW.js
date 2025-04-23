@@ -1,0 +1,1 @@
+import{_ as o}from"./q-uemlvruI.js";import{c as t,q as e}from"./q-BQP7Lu-e.js";const a=t(e(()=>o(()=>import("./q-BO-PcrW8.js"),[]),"s_zUTb8je8cxo")),i={title:"The Simulator"};export{a as default,i as head};
